@@ -28,9 +28,10 @@
   <div>
       <hr>
   <div>
-    <h3>MySQL: </h3>
-    <p>O arqivo para importar o banco de dados esta na</p> 
-     <p>/task-manager-backend/config/task_manager.sql</p>
+    <h3>Criar o banco MySQL: </h3>
+    <p>Passo 1: Digitar no navegador => localhost/phpmyadmin</p>
+    <p>Passo 2: Adicionar um novo banco de dados com o nome "task_manager"</p>
+    <p>Passo 3: importar no banco a tabela na pasta => C:\xampp\htdocs\to-do-list-REALLINK\task-manager-backend\config\task_manager </p>
   <div>
       <hr>
   <div>
