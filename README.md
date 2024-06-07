@@ -1,7 +1,7 @@
 <h1>Imagens do projeto: </h1>
-<p>
+
   ![image4](https://github.com/viniciusavalentim/to-do-list-REALLINK/assets/98558401/a11b094f-afd7-4007-9e99-2e9b59071f87)
-</p>
+
 
 <h1>Documentação do projeto<h1>
 
