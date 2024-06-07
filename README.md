@@ -12,7 +12,9 @@
     localmente.  </p>
     <p>Rodar o apache e o MySQL</p>
     <p>Clonar esse projeto na pasta do xampp - htdocs</p>
+    <p>git clone git@github.com:viniciusavalentim/to-do-list-REALLINK.git</p>
     <p>xampp/htdocs/</p>
+    <p>https://www.apachefriends.org/pt_br/download.html</p>
   <div>
       <hr>
   <div>
