@@ -1,0 +1,54 @@
+<section>
+    <div class="main-container">
+      <div class="form">
+        <form 
+          [formGroup]="tasksForm" 
+          (ngSubmit)="onSubmit()" 
+          #formdir="ngForm" 
+          class="form-container"
+          >
+          <div class="content">
+            <div class="title-container">
+              <label 
+                for="title"
+                >Title:
+              </label>
+              <input 
+                type="text" 
+                id="title" 
+                name="title" 
+                formControlName="title" 
+                required
+                [ngClass]="{'invalid-input': tasksForm.get('title')?.invalid && tasksForm.get('title')?.touched}"
+                >
+                <div *ngIf="title.invalid && formdir.submitted" class="validation-error">
+                  <p>O Titulo é obrigatório</p>
+                </div>
+            </div>
+            <div class="description-container">
+              <label for="description">Description:</label>
+              <textarea 
+                id="description" 
+                name="description" 
+                formControlName="description" 
+                required
+                
+              ></textarea>
+              <div *ngIf="description.invalid && formdir.submitted" class="validation-error">
+                <p *ngIf="description.errors?.['required']">A descrição é obrigatório</p>
+              </div>
+            </div>
+          </div>
+          <div class="form-bottom">
+            <div class="btn-form">
+              <button 
+                type="submit" 
+               
+                >Add Task
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>

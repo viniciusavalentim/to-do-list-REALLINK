@@ -1,0 +1,81 @@
+<div class="popups">
+    <app-edit-popup 
+        *ngIf="showModal" 
+        [TaskID]="TaskID"
+        (closeModalEvent)="handleCloseModal($event)"
+        (loadTasksEvent)="loadTasksWhendEdit($event)"
+        class="modal"> 
+    </app-edit-popup>
+  
+    <app-show-description-popup
+      *ngIf="showDescription" 
+      [TaskID]="TaskID"
+      (closeDescriptionEvent)="handleCloseDescription($event)"
+      class="modal"> 
+    >
+    </app-show-description-popup>
+  </div>
+  <div class="head-container">
+    <div class="title-head">
+      <h1>TO-DO LIST</h1>
+    </div>
+    <app-task-create 
+      class="app-create"   
+      (loadTasksEvent)="loadTasksWhenCreate($event)">
+    </app-task-create>
+  </div>
+  <div class="content-container">
+        <div class="pending">
+          <h2 class="title-pending">Pending:</h2>
+          <div *ngIf="tasks">
+            <p *ngIf="!showPending" class="p-show">
+              No task pending < add new > 
+            </p>
+            <ul>
+              <li *ngFor="let task of pendingTasks" class="task-item">
+                <div class="circle" (click)="performAction(task)"></div>
+                <div class="task-content">
+                  <a class="task-title" (click)="toggleModalDescription(task)">
+                    {{ task.title }}
+                  </a>
+                  <a class="task-description" (click)="toggleModalDescription(task)">
+                   Click to se description...
+                  </a>
+                  <div class="task-buttons">
+                    <button (click)="toggleModalEdit(task)"><img src="assets/svg/edit.png" alt="/" width="14px" height="14px"></button>
+                    <button (click)="deleteTask(task)"><img src="assets/svg/remover.png" alt="-" width="14px" height="14px"></button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="separator"></div>
+        <div class="completed">
+          <h2 class="title-completed">Completed:</h2>
+          <div *ngIf="tasks">
+            <p *ngIf="!showCompleted" class="p-show">
+              No task completed < complete task > 
+            </p>
+            <ul>
+              <li *ngFor="let task of completedTasks" class="task-item-completed">
+                <div class="circle-completed">
+                  <img src="assets/svg/certo.png" alt="">
+                </div>
+                <div class="task-content-completed">
+                  <a class="task-title-completed">
+                    {{ task.title }}
+                  </a>
+                  <a class="task-description-completed">
+                    {{ task.description }}
+                  </a>
+                  <div class="task-buttons-completed">
+                    <button (click)="deleteTask(task)"><img src="assets/svg/remover.png" alt="-" width="14px" height="14px"></button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+  </div>
+  
