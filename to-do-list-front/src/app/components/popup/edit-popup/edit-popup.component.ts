@@ -35,7 +35,6 @@ export class EditPopupComponent implements OnInit{
   }
 
   onSubmit() {
-    console.log(this.tasksForm.value);
     this.taskService.updateTask(this.tasksForm.value).subscribe(() => {
       this.router.navigate(['/']);
       this.closeModalEvent.emit(true);

@@ -43,7 +43,6 @@ export class TaskCreateComponent implements OnInit{
       return;
     }
 
-    console.log(this.tasksForm.value);
     this.taskService.createTask(this.tasksForm.value).subscribe(() => {
       location.reload();
       this.router.navigate(['']); 

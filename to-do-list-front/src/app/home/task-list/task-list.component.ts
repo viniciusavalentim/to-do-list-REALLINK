@@ -28,7 +28,6 @@ export class TaskListComponent implements OnInit{
   loadTasks() {
     this.taskService.getTasks().subscribe((data: Task[]) => {
       this.tasks = data;
-      console.log(this.tasks);
       this.showPending = this.tasks.some(task => task.status === 'pending');
       this.showCompleted = this.tasks.some(task => task.status === 'completed');
 
@@ -36,7 +35,6 @@ export class TaskListComponent implements OnInit{
   }
 
   get pendingTasks() {
-    console.log(this.tasks);
     return this.tasks.filter(task => task.status === 'pending');
   }
 
