@@ -22,6 +22,7 @@
     <p>Angular é um framework de desenvolvimento web mantido pelo Google, que permite criar aplicações web dinâmicas e interativas.</p>
     <h4>No CMD: npm install -g @angular/cli@16.0.1</h4>
     <h4>No CMD: npm install</h4>
+    <h4>Dentro da pasta no CMD: ng serve</h4>
   <div>
       <hr>
   <div>
